@@ -4,6 +4,9 @@ other = "More"
 [allTitle]
 other = "All {{.Title }}"
 
+[all]
+other = "All"
+
 [recentTitle]
 other = "Recent {{.Title }}"
 
