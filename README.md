@@ -10,11 +10,12 @@ Features
 
 - Responsive
 - Accessible
-- Contact form 
+- Contact form
 - Custom Robots.txt (changes values based on environment)
-- Internal templates for meta data, google analytics, and DISQUS comments
+- Internal templates for meta data, google analytics, and DISQUS or COMMENTO comments
 - RSS Discovery
 - Table of Contents (must declare `toc: true` in post parameter)
+- Stackbit configuration ([Stackbit](https://www.stackbit.com))
 
 Also includes examples of Hugo Features or Functions:
 
@@ -50,8 +51,7 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 Inside the folder of your Hugo site run:
 
-    $ cd themes
-    $ git clone https://github.com/budparr/gohugo-theme-ananke.git
+    $ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
@@ -71,9 +71,14 @@ You may need to delete the line: `themesDir = "../.."`
 
 ### Add comments
 
-To enable DISQUS comments, add `disqusShortname = YOURSHORTNAME` to your config file.
+To enable comments, add following to your config file:
 
-
+- DISQUS: `disqusShortname = YOURSHORTNAME`
+- COMMENTO:
+  ```
+  [params]
+    commentoEnable = true
+  ```
 
 ### Change the hero background
 
@@ -129,7 +134,7 @@ For example, if your css files are `static/css/custom.css` and `static/css/custo
       custom_css = ["css/custom.css","css/custom2.css"]
 ```
 
-### Show Reading Time and Word Contributing
+### Show Reading Time and Word Count
 
 If you add a key of `show_reading_time` true to either the Config Params, a page or section's front matter, articles will show the reading time and word count.
 
