@@ -36,7 +36,11 @@
             <tags>
             {{ range .Params.tags }}{{ . }},{{ end }}
             </tags>
+            <slug>
+            {{ .Params.slug }}
+            </slug>
         </item>
+
         {{ end }}
     </channel>
 </rss>
