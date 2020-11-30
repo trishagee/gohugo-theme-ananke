@@ -24,6 +24,10 @@
       <link rel="stylesheet" href="{{ relURL (.) }}">
     {{ end }}
 
+    {{ if .Params.canonicalUrl }}
+      <link rel="canonical" href="{{ .Params.canonicalUrl }}">
+    {{ end }}
+
     {{ block "favicon" . }}
       {{ partialCached "site-favicon.html" . }}
     {{ end }}
